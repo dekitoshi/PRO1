@@ -12,7 +12,7 @@ int main() {
     cin >> a >> b >> c;
     int f = time_lapse(a, b);
     
-    while  (no_fetch and c != -1) {
+    while  (!no_fetch and c != -1) {
         if (f == time_lapse(b, c)) {
             a = b;
             b = c;
