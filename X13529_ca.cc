@@ -14,10 +14,11 @@ int main() {
         int j;
         int k;
         for (j = 0; j < n; j++) {
-            for (k = 0; k < )
-            if (seq[j] == seq[n-j-1] and !found) found = true;        
+            for (k = n - 1; k > j; k--) {
+                if (seq[j] == seq[k] and !found) found = true;
+            }        
         }
-        if (found) cout << j << ' ' << n-j-1 << endl;
+        if (found) cout << j << ' ' << k << endl;
         else cout << "NO" << endl;
     }
 }
