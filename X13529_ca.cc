@@ -11,14 +11,17 @@ int main() {
         for (int i = 0; i < n; i++) {
             cin >> seq[i];
         }
+
         int j;
         int k;
         for (j = 0; j < n; j++) {
             for (k = n - 1; k > j; k--) {
-                if (seq[j] == seq[k] and !found) found = true;
+                if (seq[j] == seq[k] and !found) {
+                    cout << seq[j] << ' ' << k << endl;
+                    found = true;
+                }
             }        
         }
-        if (found) cout << j << ' ' << k << endl;
-        else cout << "NO" << endl;
+        if (!found) cout << "NO" << endl;
     }
 }
